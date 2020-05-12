@@ -104,11 +104,11 @@ public class BankController {
 
     @PostMapping("/transfer/{id}")
     @PreAuthorize("isAuthenticated()")
-    public String transactionConfirm(Model model, @ModelAttribute("bankAccountBindingModel") BankAccountBindingModel bankAccountBindingModel) {
+    public String transactionConfirm(@PathVariable("id") Long id,Model model, @ModelAttribute("bankAccountBindingModel") BankAccountBindingModel bankAccountBindingModel) {
         if (!this.transactionService.transferAmount(bankAccountBindingModel)) {
-
+            Set<BankAccount> bankAccounts = this.bankAccountService.getAllBankAccountsForTransfer(id);
             model.addAttribute("bankAccountBindingModel", bankAccountBindingModel);
-
+            model.addAttribute("bankAccounts", bankAccounts);
             model.addAttribute("view", "accounts/transfer");
             return "fragments/layout";
         }
