@@ -28,7 +28,8 @@ public class BankController {
 
     @GetMapping("/create")
     @PreAuthorize("isAuthenticated()")
-    public String create(@ModelAttribute("bankAccountBindingModel") BankAccountBindingModel bankAccountBindingModel, Model model, Principal principal) {
+    public String create(@ModelAttribute("bankAccountBindingModel") BankAccountBindingModel
+                                     bankAccountBindingModel, Model model, Principal principal) {
         bankAccountBindingModel.setUsername(principal.getName());
         model.addAttribute("bankAccountBindingModel", bankAccountBindingModel);
         model.addAttribute("view", "accounts/create-account");
@@ -37,7 +38,8 @@ public class BankController {
 
     @PostMapping("/create")
     @PreAuthorize("isAuthenticated()")
-    public String createConfirm(@ModelAttribute("bankAccountBindingModel") BankAccountBindingModel bankAccountBindingModel, Model model) {
+    public String createConfirm(@ModelAttribute("bankAccountBindingModel") BankAccountBindingModel
+                                            bankAccountBindingModel, Model model) {
         if (!this.bankAccountService.createAccount(bankAccountBindingModel)) {
             model.addAttribute("bankAccountBindingModel", bankAccountBindingModel);
             model.addAttribute("view", "accounts/create-account");

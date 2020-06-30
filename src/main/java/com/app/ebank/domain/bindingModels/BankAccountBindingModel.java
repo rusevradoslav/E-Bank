@@ -27,7 +27,7 @@ public class BankAccountBindingModel {
         return username;
     }
 
-    @Size(min = 2, max = 15)
+    @Size(min = 2, max = 10, message = " Iban must be 10 numbers")
     public String getIban() {
         return iban;
     }

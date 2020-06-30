@@ -1,5 +1,8 @@
 package com.app.ebank.domain.bindingModels;
 
+import org.hibernate.validator.constraints.Length;
+
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -16,25 +19,24 @@ public class UserBindingModel {
     }
 
     @NotNull
-    @NotEmpty
+    @Length(min = 3, message = "Username must be at least 3 digits")
     public String getUsername() {
         return username;
     }
-    @NotNull
-    @NotEmpty
-    @Pattern(regexp = "^[a-z0-9._]+@[a-z0-9.-]+[.][a-z.-]{2,6}$",message = "Invalid email")
+
+    /*@Pattern(regexp = "^[a-z0-9._]+@[a-z0-9.-]+[.][a-z.-]{2,6}$",message = "Invalid email")*/
+    @Email(message = "Invalid Email")
     public String getEmail() {
         return email;
     }
+
     @NotNull
-    @NotEmpty
-    //@Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[^\\da-zA-Z]).{8,15}$,message = "Invalid password")
+    @Length(min = 3, message = "Password must be at least 3 digits")
     public String getPassword() {
         return password;
     }
-    @NotNull
-    @NotEmpty
-    //@Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[^\\da-zA-Z]).{8,15}$,message = "Invalid password")
+
+    @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[^\\da-zA-Z]).{8,15}$", message = "Invalid password")
     public String getConfirmPassword() {
         return confirmPassword;
     }
