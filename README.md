@@ -47,7 +47,7 @@ In this application I create a mini banking software- E- Bank, Online banking sy
   Database Diagram Screenshot
   ---
   
-  ![database](/src/main/resources/static/screens/database.png)
+  ![database](/src/main/resources/static/screens/databse.png)
   
  Website Screenshots
  ---
