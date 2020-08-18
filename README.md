@@ -21,19 +21,19 @@ In this application I create a mini banking software- E- Bank, Online banking sy
 
 **Without authentication** you can see : 
 
-  - the index page
-  - the login form
-  - the user registration form
+    - the index page
+    - the login form
+    - the user registration form
   
 **With authentication** you can see :
 
-  - the home page
-  - the deposit page
-  - the withdraw page
-  - the transfer page
-  - the crate-account page
-  - the transactions page
-  
+    - the home page
+    - the deposit page
+    - the withdraw page
+    - the transfer page
+    - the crate-account page
+    - the transactions page
+    
   URLs | Description
   ---------|---------
    */* | Index page - login, register
@@ -47,7 +47,7 @@ In this application I create a mini banking software- E- Bank, Online banking sy
   Database Diagram Screenshot
   ---
   
-  ![database](/src/main/resources/static/screens/database.png)
+  ![database](/src/main/resources/static/screens/databse.png)
   
  Website Screenshots
  ---
