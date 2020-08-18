@@ -79,6 +79,3 @@ In this application I create a mini banking software- E- Bank, Online banking sy
  - All Transactions Page
  ![update](/src/main/resources/static/screens/transactions.png) 
  
- - Test
- ![update](/src/main/resources/static/screens/test1.png)
- 
