@@ -24,6 +24,7 @@ public class UserController {
     @GetMapping("/login")
     @PreAuthorize("isAnonymous()")
     public String login(@ModelAttribute("userBindingModel") UserBindingModel userBindingModel, Model model) {
+        System.out.println();
         model.addAttribute("userBindingModel",userBindingModel);
         model.addAttribute("view", "users/login-user");
         return "fragments/layout";

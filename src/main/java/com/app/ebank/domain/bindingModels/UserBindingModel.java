@@ -36,7 +36,9 @@ public class UserBindingModel {
         return password;
     }
 
-    @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[^\\da-zA-Z]).{8,15}$", message = "Invalid password")
+    /*@Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[^\\da-zA-Z]).{8,15}$", message = "Invalid password")*/
+    @NotNull
+    @Length(min = 3, message = "Password must be at least 3 digits")
     public String getConfirmPassword() {
         return confirmPassword;
     }

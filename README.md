@@ -77,5 +77,8 @@ In this application I create a mini banking software- E- Bank, Online banking sy
  ![create-new-addon](/src/main/resources/static/screens/transfer.png)
  
  - All Transactions Page
- ![update](/src/main/resources/static/screens/transactions.png)
+ ![update](/src/main/resources/static/screens/transactions.png) 
+ 
+ - All Transactions Page
+ ![update](/src/main/resources/static/screens/test.png)
  

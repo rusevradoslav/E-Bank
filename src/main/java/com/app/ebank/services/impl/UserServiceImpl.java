@@ -36,10 +36,11 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         UserDetails userDetails = this.userRepository.findFirstByUsername(username);
-
+        System.out.println();
         if (userDetails == null) {
             throw new UsernameNotFoundException("Invalid user");
         }
+        System.out.println();
         return userDetails;
     }
 
